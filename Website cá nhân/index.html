@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Home</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="/index.html"><img src="Image/logo.png" alt="Duy-Bach-Logo" class="logo"></a>
+            <div class="nav">
+                <div class="nav-item">
+                    <a href="/index.html">Home</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Travel</a>
+                    <a href="#">About</a>
+                    <a href="#">Sign in</a>
+                </div>
+            </div>
+        </header>
+        <div class="container-content">
+            <div class="slide-container">
+                <button class="nav-arrow left" id="prevBtn">←</button>
+                <div class="slider-wrapper">
+                    <div class="slide-box">
+                        <div class="image-container">
+                            <img src="/Image/bg-box1.jpg" alt="travel image">
+                        </div>
+                        <div class="content-box">
+                            <span class="tag">Travel</span>
+                        <h1>Our Dreamy Vacation is Very<br>Sweet & Fun</h1>
+                        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <div class="image-container">
+                            <img src="/Image/bg-box2.jpg" alt="fashion image">
+                        </div>
+                        <div class="content-box">
+                            <span class="tag">Blog</span>
+                            <h1>Think Before Jump and then<br>Jump into Deep</h1>
+                            <p>
+                            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <div class="image-container">
+                            <img src="/Image/bg-box2.jpg" alt="fashion image">
+                        </div>
+                        <div class="content-box">
+                            <span class="tag">Fashion</span>
+                            <h1>Think Before Jump and then<br>Jump into Deep</h1>
+                            <p>
+                            Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="slide-box">
+                        <div class="image-container">
+                            <img src="/Image/bg-box1.jpg" alt="travel image">
+                        </div>
+                        <div class="content-box">
+                            <span class="tag">Life-style</span>
+                        <h1>Our Dreamy Vacation is Very<br>Sweet & Fun</h1>
+                        <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="nav-arrow right" id="nextBtn">→</button>
+            </div>              
+            <div class="box-container">
+                <a href="#"><div class="box1">Travel</div></a>
+                <a href="#"><div class="box2">Blog</div></a>
+                <a href="#"><div class="box3">Life-style</div></a>
+                <a href="#"><div class="box4">Fashion</div></a>
+            </div>
+            <div class="introduction-container">
+                <div class="introduction">
+                    <div class="intro">
+                        <h1>Hello Everyone!</h1>
+                        <span>My name is Bach Nguyen.</span>
+                        <p>this is my first and last personal Website. I'm the student with the sharing vision of coding and writing blog.
+                            . I think here i can help myself to more confortable and more confident. Also i want to have a lot of great photo but, i can't do it for my own.
+                        </p>
+                    </div>
+                    <div class="photo">
+                        <img src="/Image/bg-box1.jpg" alt="Myself" class="photo-myself">
+                    </div>
+                </div>
+            </div>
+            <div class="top-blog">
+                <section class="right-column">
+                    <div class="mostview">
+                        <div class="bg-blog">
+                            <img src="/Image/bg-box1.jpg" alt="bg-blog">
+                        </div>
+                        <div class="content-mostview">
+                            <span class="tag">Blog</span>
+                            <h2>Black Leather Under The Dark Bridge in New York</h2>
+                            <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Donec...</p>
+                        </div>
+                    </div>
+                    <div class="left-column">
+                        <div class="search">search</div>
+                        <div class="category">
+                            <a href="">travel</a>
+                            <a href="">travel</a>
+                            <a href="">travel</a>
+                            <a href="">travel</a>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script>
+        const track = document.querySelector('.slider-wrapper');
+        const nextBtn = document.getElementById('nextBtn');
+        const prevBtn = document.getElementById('prevBtn');
+        let slideWidth = 420; // bao gồm margin
+        let isAnimating = false;
+        nextBtn.addEventListener('click', () => {
+            if (isAnimating) return;
+            isAnimating = true;
+            track.style.transition = 'transform 0.4s ease-in-out';
+            track.style.transform = `translateX(-${slideWidth}px)`;
+            track.addEventListener('transitionend', function handler() {
+                // Di chuyển phần tử đầu ra cuối
+                track.appendChild(track.firstElementChild);
+                // Dùng requestAnimationFrame để đảm bảo browser render xong đã
+                requestAnimationFrame(() => {
+                    track.style.transition = 'none';
+                    track.style.transform = 'translateX(0)';
+                    
+                    // Force reflow an toàn
+                    requestAnimationFrame(() => {
+                        isAnimating = false;
+                    });
+                });
+                track.removeEventListener('transitionend', handler);
+            });
+        });
+        prevBtn.addEventListener('click', () => {
+            if (isAnimating) return;
+            isAnimating = true;
+            // Di chuyển phần tử cuối lên đầu ngay lập tức
+            track.insertBefore(track.lastElementChild, track.firstElementChild);
+            
+            // Cập nhật vị trí để trượt về đúng chỗ
+            track.style.transition = 'none';
+            track.style.transform = `translateX(-${slideWidth}px)`;
+            // Đảm bảo browser render xong rồi mới slide về
+            requestAnimationFrame(() => {
+                track.style.transition = 'transform 0.4s ease-in-out';
+                track.style.transform = 'translateX(0)';
+            });
+            track.addEventListener('transitionend', function handler() {
+                isAnimating = false;
+                track.removeEventListener('transitionend', handler);
+            });
+        });
+    </script>
+
+</body>
+</html>
