@@ -3,15 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/Website cá nhân/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
     <title>Home</title>
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="/index.html"><img src="Image/logo.png" alt="Duy-Bach-Logo" class="logo"></a>
-            <div class="nav">
+            <a href="/index.html"><img src="/Website cá nhân/Image/logo.png" alt="Duy-Bach-Logo" class="logo"></a>
+            <nav class="nav">
                 <div class="nav-item">
                     <a href="/index.html">Home</a>
                     <a href="#">Blog</a>
@@ -19,15 +20,15 @@
                     <a href="#">About</a>
                     <a href="#">Sign in</a>
                 </div>
-            </div>
+            </nav>
         </header>
-        <div class="container-content">
-            <div class="slide-container">
+        <main class="container-content">
+            <section class="slide-container">
                 <button class="nav-arrow left" id="prevBtn">←</button>
                 <div class="slider-wrapper">
                     <div class="slide-box">
                         <div class="image-container">
-                            <img src="/Image/bg-box1.jpg" alt="travel image">
+                            <img src="/Website cá nhân/Image/bg-box1.jpg" alt="travel image">
                         </div>
                         <div class="content-box">
                             <span class="tag">Travel</span>
@@ -37,7 +38,7 @@
                     </div>
                     <div class="slide-box">
                         <div class="image-container">
-                            <img src="/Image/bg-box2.jpg" alt="fashion image">
+                            <img src="/Website cá nhân/Image/bg-box2.jpg" alt="fashion image">
                         </div>
                         <div class="content-box">
                             <span class="tag">Blog</span>
@@ -49,7 +50,7 @@
                     </div>
                     <div class="slide-box">
                         <div class="image-container">
-                            <img src="/Image/bg-box2.jpg" alt="fashion image">
+                            <img src="/Website cá nhân/Image/bg-box1.jpg" alt="fashion image">
                         </div>
                         <div class="content-box">
                             <span class="tag">Fashion</span>
@@ -61,7 +62,7 @@
                     </div>
                     <div class="slide-box">
                         <div class="image-container">
-                            <img src="/Image/bg-box1.jpg" alt="travel image">
+                            <img src="/Website cá nhân/Image/bg-box2.jpg" alt="travel image">
                         </div>
                         <div class="content-box">
                             <span class="tag">Life-style</span>
@@ -71,14 +72,14 @@
                     </div>
                 </div>
                 <button class="nav-arrow right" id="nextBtn">→</button>
-            </div>              
-            <div class="box-container">
+            </section>              
+            <section class="box-container">
                 <a href="#"><div class="box1">Travel</div></a>
                 <a href="#"><div class="box2">Blog</div></a>
                 <a href="#"><div class="box3">Life-style</div></a>
                 <a href="#"><div class="box4">Fashion</div></a>
-            </div>
-            <div class="introduction-container">
+            </section>
+            <section class="introduction-container">
                 <div class="introduction">
                     <div class="intro">
                         <h1>Hello Everyone!</h1>
@@ -88,15 +89,15 @@
                         </p>
                     </div>
                     <div class="photo">
-                        <img src="/Image/bg-box1.jpg" alt="Myself" class="photo-myself">
+                        <img src="/Website cá nhân/Image/bg-box1.jpg" alt="Myself" class="photo-myself">
                     </div>
                 </div>
-            </div>
-            <div class="top-blog">
-                <section class="right-column">
+            </section>
+            <section class="top-blog">
+                <div class="left-column">
                     <div class="mostview">
                         <div class="bg-blog">
-                            <img src="/Image/bg-box1.jpg" alt="bg-blog">
+                            <img src="/Website cá nhân/Image/bg-box1.jpg" alt="bg-blog">
                         </div>
                         <div class="content-mostview">
                             <span class="tag">Blog</span>
@@ -104,18 +105,23 @@
                             <p>Quisque velit nisi, pretium ut lacinia in, elementum id enim. Donec sollicitudin molestie malesuada. Pellentesque in ipsum id orci porta dapibus. Pellentesque in ipsum id orci porta dapibus. Nulla porttitor accumsan tincidunt. Sed porttitor lectus nibh. Pellentesque in ipsum id orci porta dapibus. Donec rutrum congue leo eget malesuada. Donec...</p>
                         </div>
                     </div>
-                    <div class="left-column">
-                        <div class="search">search</div>
-                        <div class="category">
+                </div>
+                    <aside class="right-column">
+                        <form>
+                            <div class="search">
+                                <span class=" search-icon material-symbols-outlined">search</span>
+                                <input type="search" class="search-input" placeholder="Search">
+                            </div>
+                        </form>
+                        <nav class="category">
                             <a href="">travel</a>
                             <a href="">travel</a>
                             <a href="">travel</a>
                             <a href="">travel</a>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
+                        </nav>
+                    </aside>
+            </section>
+        </main>
     </div>
     <script>
         const track = document.querySelector('.slider-wrapper');

@@ -190,16 +190,16 @@ header .nav .nav-item a:hover:before {
 }
 
 .box-container .box1 {
-  background-image: url(/Image/bg-box1.jpg);
+  background-image: url(/Website\ cá\ nhân/Image/bg-box1.jpg);
 }
 .box-container .box2 {
-  background-image: url(/Image/bg-box2.jpg);
+  background-image: url(/Website\ cá\ nhân/Image/bg-box2.jpg);
 }
 .box-container .box3 {
-  background-image: url(/Image/bg-box1.jpg);
+  background-image: url(/Website\ cá\ nhân/Image/bg-box1.jpg);
 }
 .box-container .box4 {
-  background-image: url(/Image/bg-box2.jpg);
+  background-image: url(/Website\ cá\ nhân/Image/bg-box2.jpg);
 }
 
 /* Hover effect */
@@ -276,14 +276,15 @@ header .nav .nav-item a:hover:before {
   height: 340px;
 }
 
-.right-column {
+.left-column {
   width: 80%;
   margin: 60px auto;
   display: flex;
   align-items: center;
+  padding: 0px 50px;
 }
 .mostview {
-  width: 800px; /* bạn có thể thay đổi theo ý */
+  width: 100%; /* bạn có thể thay đổi theo ý */
   background: white;
   border-radius: 10px;
   overflow: hidden; /* rất quan trọng để bo tròn cả ảnh và nội dung */
@@ -319,7 +320,7 @@ header .nav .nav-item a:hover:before {
   line-height: 1.6;
 }
 
-.left-column {
+.right-column {
   width: 20%;
   margin: 60px auto;
   display: flex;
@@ -327,12 +328,34 @@ header .nav .nav-item a:hover:before {
   align-items: center;
 }
 
-.search {
-  width: 150px;
-  height: 50px;
-  margin: 0px auto;
-  border: 2px solid #000;
-  background: rgb(104,255, 255);
+.search{
+  width: max-content;
+  display: flex;
+  align-items: center;
+  padding: 14px;
+  border-radius: 28px;
+  background: #f6f6f6;
+  transition: box-shadow 0.25s;
+}
+
+.search:focus-within {
+  box-shadow: rgba(0, 0, 0, 0.75);
+}
+
+
+.search-input {
+  font-size: 16px;
+  font-family: 'Lexend', sans-serif;
+  border: none;
+  margin-left: 14px;
+  color: #333333;
+  outline: none;
+  background: transparent;
+}
+
+.search-input::placeholder
+,.search-icon {
+  color: rgba(0, 0, 0, 0.5);
 }
 
 .category {
@@ -359,5 +382,6 @@ header .nav .nav-item a:hover:before {
 
 .top-blog {
   display: flex;
-  ;
+  align-content: center;
+  justify-content: center;
 }
