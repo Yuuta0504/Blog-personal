@@ -414,7 +414,7 @@ ul {
   font-size: 18px;
   color: #ffffff;
   text-transform: capitalize;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   font-weight: 500;
   position: relative;
 }
@@ -440,5 +440,31 @@ ul {
   text-transform: capitalize;
   color: #ffffff;
   text-decoration: none;
-  
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+.footer-col ul li a:hover {
+  color: #ffffff;
+  padding-left: 8px;
+}
+
+.footer-col .social-links a {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin-right: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.footer-col .social-links a:hover {
+  color: #24262b;
+  background-color: #ffffff;
 }
